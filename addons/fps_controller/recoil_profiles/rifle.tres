@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="FPSRecoilProfile" format=3 uid="uid://dnyvrq32dbg2u"]
+
+[ext_resource type="Script" uid="uid://b0yodarwd36m6" path="res://addons/fps_controller/modules/fps_recoil_profile.gd" id="1_dnr82"]
+
+[sub_resource type="Curve" id="Curve_8eyrc"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.20000002, 1, 1, Vector2(0.25, 0.05), 0.20000002, 1.142857, 1, 1, Vector2(0.6, 0.45), 1.142857, -1.6250001, 1, 1, Vector2(1, -0.2), -1.6250001, 0.0, 1, 1]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_5slcy"]
+_limits = [0.0, 2.0, 0.0, 1.0]
+_data = [Vector2(0, 1.1), 0.0, -1.0, 1, 1, Vector2(0.3, 0.8), -1.0, -0.64285713, 1, 1, Vector2(1, 0.35), -0.64285713, 0.0, 1, 1]
+point_count = 3
+
+[resource]
+script = ExtResource("1_dnr82")
+vertical = SubResource("Curve_5slcy")
+horizontal = SubResource("Curve_8eyrc")
+spread = Vector2(0.12, 0.06)
+shake_trauma = 0.18

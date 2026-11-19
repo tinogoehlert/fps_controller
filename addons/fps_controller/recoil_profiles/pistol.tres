@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="FPSRecoilProfile" format=3]
+
+[ext_resource type="Script" path="res://addons/fps_controller/modules/fps_recoil_profile.gd" id="1_sl86r"]
+
+[sub_resource type="Curve" id="Curve_shpww"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 0), 0.0, 0.0, 1, 1, Vector2(1, 0), 0.0, 0.0, 1, 1]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_vrbcw"]
+_limits = [0.0, 4.0, 0.0, 1.0]
+_data = [Vector2(0, 2.2), 0.0, 0.0, 1, 1, Vector2(1, 2.2), 0.0, 0.0, 1, 1]
+point_count = 2
+
+[resource]
+script = ExtResource("1_sl86r")
+pattern_shots = 1
+vertical = SubResource("Curve_vrbcw")
+horizontal = SubResource("Curve_shpww")
+spread = Vector2(0.3, 0.2)
+snap = 45.0
+recovery = 0.95
+recovery_speed = 22.0
+recovery_delay = 0.05
+weapon_kick = Vector2(0.05, 8)
+shake_trauma = 0.3
